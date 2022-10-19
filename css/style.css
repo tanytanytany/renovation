@@ -161,14 +161,19 @@ textarea.input {
 .input {
   padding: 0.875rem 0.9375rem;
   line-height: 120%;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
+}
+@media (max-width: 29.99875em) {
+  .input {
+    font-size: 0.9375rem;
+  }
 }
 
 .btn {
   white-space: nowrap;
-  font-size: 1.125rem;
-  border-radius: 10px;
-  line-height: 120%;
+  font-size: 1.0625rem;
+  border-radius: 0.625rem;
+  line-height: 1.1764705882em;
   font-weight: 500;
   padding: 0.875rem 2rem 0.875rem 2rem;
   transition: all 0.3s ease 0s;
@@ -280,7 +285,7 @@ textarea.input {
 .title {
   font-family: "Dosis", sans-serif;
   font-weight: 700;
-  font-size: calc(1.5625rem + 0.9375 * (((100vw - 22.5rem)) / ((97.5))));
+  font-size: calc(1.4375rem + 1.0625 * (((100vw - 22.5rem)) / ((97.5))));
   line-height: 150%;
   text-align: center;
   text-transform: capitalize;
@@ -403,13 +408,23 @@ textarea.input {
 @media (max-width: 47.99875em) {
   .header__container {
     gap: 0.9375rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    min-height: 4.375rem;
   }
 }
 .header__logo {
   display: block;
   flex: 0 0 7.5rem;
+  height: 2.8125rem;
   position: relative;
   z-index: 20;
+}
+@media (max-width: 29.99875em) {
+  .header__logo {
+    flex: 0 0 6.25rem;
+    height: 1.875rem;
+  }
 }
 .header__menu {
   flex: 1 1 auto;
@@ -419,8 +434,13 @@ textarea.input {
   position: relative;
   z-index: 20;
   padding: 0.5rem 2rem 0.5rem 2rem;
-  font-size: 1rem;
+  font-size: calc(0.75rem + 0.25 * (((100vw - 22.5rem)) / ((97.5))));
   white-space: nowrap;
+}
+@media (max-width: 29.99875em) {
+  .header__button {
+    padding: 0.5rem 1.375rem 0.5rem 1.375rem;
+  }
 }
 
 ._header-scroll {
@@ -443,7 +463,7 @@ textarea.input {
     position: fixed;
     top: 0;
     right: -100%;
-    min-width: 20rem;
+    width: 100%;
     height: 100%;
     background-color: #132f8c;
     color: white;
@@ -451,34 +471,31 @@ textarea.input {
     overflow: auto;
     padding: 7.5rem 1.875rem 1.875rem 1.875rem;
   }
-  .menu__body::before {
-    content: "";
-    transition: all 0.3s ease 0s;
-    top: 0;
-    right: -100%;
-    display: block;
-    width: 100%;
-    height: 70px;
-    background-color: #132f8c;
-    position: fixed;
-    z-index: 30;
-  }
 }
-@media (max-width: 47.99875em) and (max-width: 29.99875em) {
-  .menu__body {
-    width: 100%;
-  }
+.menu__body::before {
+  content: "";
+  transition: all 0.3s ease 0s;
+  top: 0;
+  right: -100%;
+  display: block;
+  width: 100%;
+  height: 4.375rem;
+  background-color: #132f8c;
+  position: fixed;
+  z-index: 30;
 }
 .menu__list {
   color: white;
   justify-content: end;
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.3125rem;
   gap: calc(1.25rem + 0.625 * (((100vw - 22.5rem)) / ((97.5))));
 }
 @media (max-width: 47.99875em) {
   .menu__list {
     flex-direction: column;
-    gap: 1.875rem;
+    column-gap: 1.875rem;
     text-align: right;
   }
 }
@@ -650,7 +667,7 @@ textarea.input {
   position: absolute;
   width: 100%;
   height: calc(5.3125rem + 10.3125 * (((100vw - 22.5rem)) / ((97.5))));
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   background: url("../img/wave.svg") 0 0/cover no-repeat;
 }
@@ -977,7 +994,7 @@ textarea.input {
 .main_subtitle {
   font-family: "Dosis", sans-serif;
   font-weight: 700;
-  font-size: calc(1.25rem + 1.5625 * (((100vw - 22.5rem)) / ((97.5))));
+  font-size: calc(1.125rem + 1.6875 * (((100vw - 22.5rem)) / ((97.5))));
   line-height: 1.2666666667;
   margin-bottom: 0.625rem;
 }
@@ -1036,13 +1053,13 @@ textarea.input {
 .item-compare {
   display: flex;
   flex-direction: column;
-  gap: calc(1.25rem + 0.625 * (((100vw - 22.5rem)) / ((97.5))));
+  gap: calc(1.25rem + 2.5 * (((100vw - 22.5rem)) / ((97.5))));
 }
 @media (min-width: 47.99875em) {
   .item-compare {
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }
 .item-compare:nth-child(even) {
@@ -1055,16 +1072,16 @@ textarea.input {
 }
 .item-compare__image-ibg_contain {
   min-height: 18.75rem;
-  padding-bottom: 37%;
+  padding-bottom: 30%;
 }
 @media (min-width: 47.99875em) {
   .item-compare__image-ibg_contain {
-    flex: 0 0 50%;
+    flex: 0 0 45%;
   }
 }
 @media (min-width: 61.99875em) {
   .item-compare__content {
-    max-width: 30rem;
+    max-width: 34.375rem;
   }
 }
 .item-compare__title {
@@ -1351,7 +1368,7 @@ textarea.input {
 }
 .item-advantage__number {
   font-family: "Dosis", sans-serif;
-  font-size: calc(1.875rem + 0.3125 * (((100vw - 22.5rem)) / ((97.5))));
+  font-size: calc(1.5625rem + 0.625 * (((100vw - 22.5rem)) / ((97.5))));
   font-weight: 700;
   line-height: 150%;
   text-align: center;
@@ -1362,7 +1379,7 @@ textarea.input {
 }
 .item-advantage__text {
   font-family: "Dosis", sans-serif;
-  font-size: 1.375rem;
+  font-size: calc(0.9375rem + 0.4375 * (((100vw - 22.5rem)) / ((97.5))));
   font-weight: 500;
   line-height: 150%;
   text-align: center;
@@ -1434,12 +1451,12 @@ textarea.input {
   flex-direction: column;
   border: 2px solid #132f8c;
   border-radius: 1.25rem;
-  padding: 1.25rem 1.25rem 2.5rem;
+  padding: 1.875rem 1.875rem 2.5rem;
   justify-content: center;
 }
 @media (max-width: 47.99875em) {
   .item-package {
-    padding: 1.25rem 1.25rem 1.875rem;
+    padding: 1.875rem;
   }
 }
 .item-package__name {
@@ -1458,7 +1475,7 @@ textarea.input {
   flex: 1 1 auto;
 }
 .item-package__list:not(:last-child) {
-  margin-bottom: 0.9375rem;
+  margin-bottom: 1.25rem;
 }
 .item-package__item {
   text-align: center;
@@ -1466,7 +1483,7 @@ textarea.input {
   line-height: 1.1764705882;
 }
 .item-package__item:not(:last-child) {
-  margin-bottom: 0.3125rem;
+  margin-bottom: 0.625rem;
 }
 .item-package__prices {
   font-family: "Dosis", sans-serif;
@@ -1498,8 +1515,12 @@ textarea.input {
   font-weight: 700;
   color: #132f8c;
 }
+.item-package__button {
+  width: 100%;
+}
+
 .item-package__item_not {
-  color: #8e9198;
+  color: #c7cddc;
 }
 
 .price {
@@ -1766,7 +1787,7 @@ textarea.input {
 }
 .sign-up__line {
   display: flex;
-  gap: 0.3125rem;
+  gap: 0.9375rem;
 }
 @media (max-width: 37.5rem) {
   .sign-up__line {
@@ -1849,6 +1870,12 @@ textarea.input {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .item-blog:hover {
+    transform: translate(0px, -10px);
+  }
 }
 .item-blog__image-ibg {
   padding-bottom: 58%;
@@ -1928,16 +1955,23 @@ textarea.input {
 }
 .spollers__title {
   text-align: left;
+  width: 100%;
+  cursor: default;
   font-weight: 600;
-  font-size: calc(1.125rem + 0.125 * (((100vw - 22.5rem)) / ((97.5))));
+  font-size: 1.25rem;
   line-height: 150%;
   gap: 0.625rem;
   padding: 0 0 1.25rem 0;
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   transition: all 0.3s ease 0s;
+}
+@media (max-width: 29.99875em) {
+  .spollers__title {
+    font-size: 1.0625rem;
+  }
 }
 .spollers__title::after {
   transition: all 0.6s ease 0s;
@@ -1982,12 +2016,12 @@ textarea.input {
 }
 @media (min-width: 22.5em) and (max-width: 76.875em) {
   .work__titles:not(:last-child) {
-    margin-bottom: calc(1.875rem + 1.25 * (((100vw - 22.5rem)) / ((54.375))));
+    margin-bottom: calc(1.25rem + 1.875 * (((100vw - 22.5rem)) / ((54.375))));
   }
 }
 @media (max-width: 22.5em) {
   .work__titles:not(:last-child) {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.25rem;
   }
 }
 .work__subtitle {
@@ -2002,7 +2036,7 @@ textarea.input {
   font-weight: 400;
   max-width: 50rem;
   margin: 0 auto;
-  font-size: calc(1.125rem + 0.125 * (((100vw - 22.5rem)) / ((97.5))));
+  font-size: calc(0.9375rem + 0.3125 * (((100vw - 22.5rem)) / ((97.5))));
   line-height: 150%;
 }
 @media (min-width: 76.875em) {
