@@ -5,34 +5,45 @@
 	<title>Главная</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20221017162546" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20221019130042" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20221017162546" rel="stylesheet" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20221019130042" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-	<div class="wrapper">
+	<div id="up" class="wrapper">
 		<div class="first-screen">
 			<header class="first-screen__header header">
+				<div data-goto="up" class="btn-up">
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M21.25 16.7625L15.8875 11.4625C15.7713 11.3454 15.633 11.2524 15.4807 11.1889C15.3284 11.1254 15.165 11.0928 15 11.0928C14.835 11.0928 14.6716 11.1254 14.5193 11.1889C14.367 11.2524 14.2287 11.3454 14.1125 11.4625L8.8125 16.7625C8.69534 16.8787 8.60234 17.017 8.53888 17.1693C8.47542 17.3216 8.44275 17.485 8.44275 17.65C8.44275 17.815 8.47542 17.9784 8.53888 18.1307C8.60234 18.2831 8.69534 18.4213 8.8125 18.5375C9.0467 18.7703 9.36351 18.901 9.69375 18.901C10.024 18.901 10.3408 18.7703 10.575 18.5375L15 14.1125L19.425 18.5375C19.6578 18.7685 19.9721 18.8986 20.3 18.9C20.4645 18.901 20.6276 18.8694 20.7799 18.8072C20.9322 18.745 21.0707 18.6534 21.1875 18.5375C21.3088 18.4255 21.4068 18.2905 21.4757 18.1404C21.5446 17.9904 21.583 17.8281 21.5888 17.6631C21.5946 17.498 21.5677 17.3334 21.5095 17.1789C21.4514 17.0243 21.3632 16.8828 21.25 16.7625Z" fill="white" />
+					</svg>
+				</div>
 				<div class="header__container">
-					<a href="#" class="header__logo logo"><img src="img/logo.svg?_v=1666020346275" alt="Logo" /></a>
+					<a href="#" class="header__logo logo"><img src="img/logo.svg?_v=1666180842304" alt="Logo" /></a>
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="" class="menu__link">About</a></li>
-								<li class="menu__item">
+								<li data-goto="about" class="menu__item">
+									<a href="" class="menu__link">About</a>
+								</li>
+								<li data-goto="services" class="menu__item">
 									<a href="" class="menu__link">Services</a>
 								</li>
-								<li class="menu__item">
+								<li data-goto="contacts" class="menu__item">
 									<a href="" class="menu__link">Contacts</a>
 								</li>
-								<li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+								<li data-goto="blog" class="menu__item">
+									<a href="" class="menu__link">Blog</a>
+								</li>
 							</ul>
 						</nav>
 					</div>
-					<button class="header__button btn btn_border">Order now</button>
+					<button class="header__button btn btn_border">
+						<span>Order now</span>
+					</button>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 				</div>
 			</header>
@@ -42,27 +53,29 @@
 						<h2 class="main_subtitle">New live your Website</h2>
 						<h1 class="main__title">Renovation</h1>
 						<p class="main__text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua, magna
-							aliqua. ipsum is simply dummy text of the printing.
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+							sint. Velit officia consequat duis enim velit mollit
 						</p>
-						<button class="main__button btn btn_white">Redesign your site</button>
+						<button class="main__button btn btn_white">
+							<span>Redesign your site</span>
+						</button>
 					</div>
 					<div data-aos="fade-left" class="main__image-ibg_contain">
-						<picture><source srcset="img/main-image.webp" type="image/webp"><img src="img/main-image.png?_v=1666020346275" alt="Main" /></picture>
+						<picture><source srcset="img/main-image.webp" type="image/webp"><img src="img/main-image.png?_v=1666180842304" alt="Main" /></picture>
 					</div>
 				</div>
 			</section>
 		</div>
 
-		<main class="page">
+		<main class="page ">
+
 			<section class="page__compare compare">
 				<div class="compare__container">
 					<div class="compare__item item-compare">
-						<div class="item-compare__image-ibg_contain item-compare__image_rotate-left">
-							<picture><source srcset="img/old.webp" type="image/webp"><img src="img/old.png?_v=1666020346275" alt="old site" /></picture>
+						<div data-aos="fade-up-right" data-aos-delay="450" data-aos-duration="500" class="item-compare__image-ibg_contain item-compare__image_rotate-left">
+							<picture><source srcset="img/old.webp" type="image/webp"><img src="img/old.png?_v=1666180842304" alt="old site" /></picture>
 						</div>
-						<div class="item-compare__content">
+						<div class="item-compare__content" data-aos="fade-up-left">
 							<h2 class="item-compare__title">
 								Leave your old site in the past
 							</h2>
@@ -83,7 +96,7 @@
 						</div>
 					</div>
 					<div class="compare__item item-compare">
-						<div class="item-compare__content">
+						<div data-aos="fade-up-right" class="item-compare__content">
 							<h2 class="item-compare__title">
 								New solutions for your website
 							</h2>
@@ -95,13 +108,13 @@
 								</p>
 							</div>
 						</div>
-						<div class="item-compare__image-ibg_contain item-compare__image_rotate-right">
-							<picture><source srcset="img/new.webp" type="image/webp"><img src="img/new.png?_v=1666020346275" alt="new site" /></picture>
+						<div data-aos="fade-up-left" data-aos-delay="450" data-aos-duration="500" class="item-compare__image-ibg_contain item-compare__image_rotate-right">
+							<picture><source srcset="img/new.webp" type="image/webp"><img src="img/new.png?_v=1666180842304" alt="new site" /></picture>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="page__our-services our-services">
+			<section id="services" class="page__our-services our-services">
 				<div class="our-services__container">
 					<div class="our-services__titles">
 						<h3 class="our-services__subtitle subtitle">WHAT WE PROVIDE</h3>
@@ -113,7 +126,8 @@
 						<div data-aos="flip-left" class="our-services__item item-services">
 							<div class="item-services__body">
 								<div class="item-services__icon">
-									<picture><source srcset="img/services/01.webp" type="image/webp"><img src="img/services/01.png?_v=1666020346275" alt="Web Design" /></picture>
+
+									<picture><source srcset="img/services/01.webp" type="image/webp"><img src="img/services/01.png?_v=1666180842304" alt="Web Design" /></picture>
 								</div>
 								<h3 class="item-services__title">Web Design</h3>
 								<p class="item-services__text">
@@ -130,7 +144,7 @@
 						<div data-aos="flip-left" data-aos-delay="100" class="our-services__item item-services">
 							<div class="item-services__body">
 								<div class="item-services__icon">
-									<picture><source srcset="img/services/02.webp" type="image/webp"><img src="img/services/02.png?_v=1666020346275" alt="Web Design" /></picture>
+									<picture><source srcset="img/services/02.webp" type="image/webp"><img src="img/services/02.png?_v=1666180842304" alt="Web Design" /></picture>
 								</div>
 								<h3 class="item-services__title">Web Development</h3>
 								<p class="item-services__text">
@@ -148,7 +162,7 @@
 						<div data-aos="flip-left" data-aos-delay="150" class="our-services__item item-services">
 							<div class="item-services__body">
 								<div class="item-services__icon">
-									<picture><source srcset="img/services/03.webp" type="image/webp"><img src="img/services/03.png?_v=1666020346275" alt="Web Design" /></picture>
+									<picture><source srcset="img/services/03.webp" type="image/webp"><img src="img/services/03.png?_v=1666180842304" alt="Web Design" /></picture>
 								</div>
 								<h3 class="item-services__title">digital marketing</h3>
 								<p class="item-services__text">
@@ -165,7 +179,7 @@
 						<div data-aos="flip-left" data-aos-delay="100" class="our-services__item item-services">
 							<div class="item-services__body">
 								<div class="item-services__icon">
-									<picture><source srcset="img/services/04.webp" type="image/webp"><img src="img/services/04.png?_v=1666020346275" alt="Web Design" /></picture>
+									<picture><source srcset="img/services/04.webp" type="image/webp"><img src="img/services/04.png?_v=1666180842304" alt="Web Design" /></picture>
 								</div>
 								<h3 class="item-services__title">copywriting</h3>
 								<p class="item-services__text">
@@ -183,7 +197,7 @@
 						<div data-aos="flip-left" data-aos-delay="100" class="our-services__item item-services">
 							<div class="item-services__body">
 								<div class="item-services__icon">
-									<picture><source srcset="img/services/05.webp" type="image/webp"><img src="img/services/05.png?_v=1666020346275" alt="Web Design" /></picture>
+									<picture><source srcset="img/services/05.webp" type="image/webp"><img src="img/services/05.png?_v=1666180842304" alt="Web Design" /></picture>
 								</div>
 								<h3 class="item-services__title">SEO Optimization</h3>
 								<p class="item-services__text">
@@ -200,7 +214,7 @@
 						<div data-aos="flip-left" data-aos-delay="150" class="our-services__item item-services">
 							<div class="item-services__body">
 								<div class="item-services__icon">
-									<picture><source srcset="img/services/06.webp" type="image/webp"><img src="img/services/06.png?_v=1666020346275" alt="Web Design" /></picture>
+									<picture><source srcset="img/services/06.webp" type="image/webp"><img src="img/services/06.png?_v=1666180842304" alt="Web Design" /></picture>
 								</div>
 								<h3 class="item-services__title">App Optimization</h3>
 								<p class="item-services__text">
@@ -218,9 +232,9 @@
 					</div>
 
 			</section>
-			<section class="page__about about">
+			<section id="about" data-watch class="page__about about">
 				<div class="about__container">
-					<div class="about__content">
+					<div data-aos="fade-up-right" class="about__content">
 						<div class="about__titles">
 							<h3 class="about__subtitle subtitle">
 								Information about our company
@@ -247,8 +261,8 @@
 						</div>
 						<a href="#" class="about__link link-text">read more about us </a>
 					</div>
-					<div class="about__image-ibg_contain">
-						<picture><source srcset="img/about.webp" type="image/webp"><img src="img/about.png?_v=1666020346275" alt="about" /></picture>
+					<div data-aos="fade-up-left" data-aos-delay="150" class="about__image-ibg_contain">
+						<picture><source srcset="img/about.webp" type="image/webp"><img src="img/about.png?_v=1666180842304" alt="about" /></picture>
 					</div>
 				</div>
 			</section>
@@ -286,7 +300,7 @@
 								<div class="reviews__item item-review">
 									<div class="item-review__top">
 										<div class="item-review__image">
-											<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.jpg?_v=1666020346275" alt="" /></picture>
+											<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.jpg?_v=1666180842304" alt="" /></picture>
 										</div>
 										<p class="item-review__name">Esther Howard</p>
 									</div>
@@ -303,7 +317,7 @@
 								<div class="reviews__item item-review">
 									<div class="item-review__top">
 										<div class="item-review__image">
-											<picture><source srcset="img/reviews/02.webp" type="image/webp"><img src="img/reviews/02.jpg?_v=1666020346275" alt="" /></picture>
+											<picture><source srcset="img/reviews/02.webp" type="image/webp"><img src="img/reviews/02.jpg?_v=1666180842304" alt="" /></picture>
 										</div>
 										<p class="item-review__name">Esther Howard</p>
 									</div>
@@ -321,7 +335,7 @@
 								<div class="reviews__item item-review">
 									<div class="item-review__top">
 										<div class="item-review__image">
-											<picture><source srcset="img/reviews/03.webp" type="image/webp"><img src="img/reviews/03.jpg?_v=1666020346275" alt="" /></picture>
+											<picture><source srcset="img/reviews/03.webp" type="image/webp"><img src="img/reviews/03.jpg?_v=1666180842304" alt="" /></picture>
 										</div>
 										<p class="item-review__name">Esther Howard</p>
 									</div>
@@ -453,7 +467,7 @@
 										<p class="item-package__prise-new">$699</p>
 									</div>
 									<button class="item-package__button btn btn_blue">
-										Get discount 15%
+										<span>Get discount 15%</span>
 									</button>
 								</div>
 							</div>
@@ -482,7 +496,7 @@
 										<p class="item-package__prise-new">$999</p>
 									</div>
 									<button class="item-package__button btn btn_blue">
-										Get discount 25%
+										<span> Get discount 25%</span>
 									</button>
 								</div>
 							</div>
@@ -507,7 +521,7 @@
 										<p class="item-package__prise-new">$1699</p>
 									</div>
 									<button class="item-package__button btn btn_blue">
-										Get discount 35%
+										<span>Get discount 35%</span>
 									</button>
 								</div>
 							</div>
@@ -530,7 +544,7 @@
 										<p class="item-package__prise-new">Individual cost</p>
 									</div>
 									<button class="item-package__button btn btn_blue">
-										Сontact the manager
+										<span>Сontact the manager</span>
 									</button>
 								</div>
 							</div>
@@ -553,14 +567,14 @@
 							<div class="sign-up__line">
 								<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="Enter your Email" class="sign-up__input input" />
 								<button type="submit" class="sign-up__button btn btn_violet">
-									Subscribe now
+									<span>Subscribe now</span>
 								</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</section>
-			<section class="page__blog blog">
+			<section id="blog" class="page__blog blog">
 				<div class="blog__container">
 					<div class="blog__titles">
 						<h3 class="blog__subtitle subtitle">BLOG & ARTICLE</h3>
@@ -569,7 +583,7 @@
 					<div class="blog__items">
 						<div class="blog__item item-blog">
 							<div class="item-blog__image-ibg">
-								<picture><source srcset="img/blog/01.webp" type="image/webp"><img src="img/blog/01.jpg?_v=1666020346275" alt="" /></picture>
+								<picture><source srcset="img/blog/01.webp" type="image/webp"><img src="img/blog/01.jpg?_v=1666180842304" alt="" /></picture>
 							</div>
 							<div class="item-blog__content">
 								<div class="item-blog__body">
@@ -585,7 +599,7 @@
 						</div>
 						<div class="blog__item item-blog">
 							<div class="item-blog__image-ibg">
-								<picture><source srcset="img/blog/02.webp" type="image/webp"><img src="img/blog/02.jpg?_v=1666020346275" alt="" /></picture>
+								<picture><source srcset="img/blog/02.webp" type="image/webp"><img src="img/blog/02.jpg?_v=1666180842304" alt="" /></picture>
 							</div>
 							<div class="item-blog__content">
 								<div class="item-blog__body">
@@ -600,7 +614,7 @@
 						</div>
 						<div class="blog__item item-blog">
 							<div class="item-blog__image-ibg">
-								<picture><source srcset="img/blog/03.webp" type="image/webp"><img src="img/blog/03.jpg?_v=1666020346275" alt="" /></picture>
+								<picture><source srcset="img/blog/03.webp" type="image/webp"><img src="img/blog/03.jpg?_v=1666180842304" alt="" /></picture>
 							</div>
 							<div class="item-blog__content">
 								<div class="item-blog__body">
@@ -615,7 +629,7 @@
 						</div>
 						<div class="blog__item item-blog">
 							<div class="item-blog__image-ibg">
-								<picture><source srcset="img/blog/04.webp" type="image/webp"><img src="img/blog/04.jpg?_v=1666020346275" alt="" /></picture>
+								<picture><source srcset="img/blog/04.webp" type="image/webp"><img src="img/blog/04.jpg?_v=1666180842304" alt="" /></picture>
 							</div>
 							<div class="item-blog__content">
 								<div class="item-blog__body">
@@ -630,7 +644,7 @@
 						</div>
 						<div class="blog__item item-blog">
 							<div class="item-blog__image-ibg">
-								<picture><source srcset="img/blog/05.webp" type="image/webp"><img src="img/blog/05.jpg?_v=1666020346275" alt="" /></picture>
+								<picture><source srcset="img/blog/05.webp" type="image/webp"><img src="img/blog/05.jpg?_v=1666180842304" alt="" /></picture>
 							</div>
 							<div class="item-blog__content">
 								<div class="item-blog__body">
@@ -646,7 +660,7 @@
 						</div>
 						<div class="blog__item item-blog">
 							<div class="item-blog__image-ibg">
-								<picture><source srcset="img/blog/06.webp" type="image/webp"><img src="img/blog/06.jpg?_v=1666020346275" alt="" /></picture>
+								<picture><source srcset="img/blog/06.webp" type="image/webp"><img src="img/blog/06.jpg?_v=1666180842304" alt="" /></picture>
 							</div>
 							<div class="item-blog__content">
 								<div class="item-blog__body">
@@ -790,7 +804,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__work work">
+			<section id="contacts" class="page__work work">
 				<div class="work__container">
 					<div class="work__titles">
 						<h3 class="work__subtitle subtitle">WANT TO WORK WITH US?</h3>
@@ -805,9 +819,9 @@
 						voluptate aute id deserunt nisi
 					</p>
 					<div class="work__buttons">
-						<button class="work__button btn btn_white">Call now</button>
+						<button class="work__button btn btn_white"><span>Call now</span></button>
 						<button class="work__button btn btn_violet">
-							Order the Redesign
+							<span>Order the Renovation</span>
 						</button>
 					</div>
 				</div>
@@ -818,7 +832,7 @@
 				<div class="footer__body">
 					<div class="footer__info">
 						<a href="#" class="footer__logo logo">
-							<img src="img/logo.svg?_v=1666020346275" alt="logo" />
+							<img src="img/logo.svg?_v=1666180842304" alt="logo" />
 						</a>
 						<p class="footer__text">
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -827,16 +841,16 @@
 						</p>
 						<div class="footer__social">
 							<a href="#" class="footer__social-item">
-								<img src="img/social/01.svg?_v=1666020346275" alt="" />
+								<img src="img/social/01.svg?_v=1666180842304" alt="" />
 							</a>
 							<a href="#" class="footer__social-item">
-								<img src="img/social/02.svg?_v=1666020346275" alt="" />
+								<img src="img/social/02.svg?_v=1666180842304" alt="" />
 							</a>
 							<a href="#" class="footer__social-item">
-								<img src="img/social/03.svg?_v=1666020346275" alt="" />
+								<img src="img/social/03.svg?_v=1666180842304" alt="" />
 							</a>
 							<a href="#" class="footer__social-item">
-								<img src="img/social/04.svg?_v=1666020346275" alt="" />
+								<img src="img/social/04.svg?_v=1666180842304" alt="" />
 							</a>
 						</div>
 					</div>
@@ -885,13 +899,26 @@
 							<h4 class="footer__title">Our Contacts</h4>
 							<ul class="footer__list">
 								<li class="footer__item footer__item_location">
+									<span><svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 13.4 7.05 19.5 7.35 19.76C7.53113 19.9149 7.76165 20.0001 8 20.0001C8.23835 20.0001 8.46887 19.9149 8.65 19.76C9 19.5 16 13.4 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0ZM8 17.65C5.87 15.65 2 11.34 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2C9.5913 2 11.1174 2.63214 12.2426 3.75736C13.3679 4.88258 14 6.4087 14 8C14 11.34 10.13 15.66 8 17.65ZM8 4C7.20887 4 6.43552 4.2346 5.77772 4.67412C5.11992 5.11365 4.60723 5.73836 4.30448 6.46927C4.00173 7.20017 3.92252 8.00444 4.07686 8.78036C4.2312 9.55629 4.61216 10.269 5.17157 10.8284C5.73098 11.3878 6.44371 11.7688 7.21964 11.9231C7.99556 12.0775 8.79983 11.9983 9.53073 11.6955C10.2616 11.3928 10.8864 10.8801 11.3259 10.2223C11.7654 9.56448 12 8.79113 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4ZM8 10C7.60444 10 7.21776 9.8827 6.88886 9.66294C6.55996 9.44318 6.30362 9.13082 6.15224 8.76537C6.00087 8.39991 5.96126 7.99778 6.03843 7.60982C6.1156 7.22186 6.30608 6.86549 6.58579 6.58579C6.86549 6.30608 7.22186 6.1156 7.60982 6.03843C7.99778 5.96126 8.39991 6.00087 8.76537 6.15224C9.13082 6.30362 9.44318 6.55996 9.66294 6.88886C9.8827 7.21776 10 7.60444 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10Z" fill="white" />
+										</svg>
+									</span>
 									<a href="#" class="footer__link">2972 Westheimer Rd. Santa Ana, Illinois 85486
 									</a>
 								</li>
 								<li class="footer__item footer__item_phone">
+									<span><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.4042 12.601L15.0255 10.2585C14.8414 10.0768 14.617 9.94133 14.3706 9.86327C14.1242 9.78522 13.8628 9.76677 13.608 9.80945C13.3657 9.85139 13.136 9.94751 12.936 10.0907C12.7359 10.2338 12.5707 10.4203 12.4525 10.6362L11.9501 11.2948C11.9129 11.3426 11.8661 11.382 11.8128 11.4106C11.7595 11.4391 11.7008 11.4562 11.6405 11.4607C11.5817 11.4649 11.5227 11.4562 11.4675 11.4354C11.4123 11.4146 11.3623 11.382 11.3208 11.34L7.66603 7.70394C7.62412 7.66084 7.59144 7.60964 7.56997 7.55346C7.54851 7.49728 7.53871 7.4373 7.54118 7.3772C7.54595 7.31815 7.56273 7.26071 7.5905 7.20841C7.61827 7.15611 7.65643 7.11005 7.70264 7.07308L8.35327 6.56092C8.56724 6.43967 8.75116 6.27164 8.89135 6.06935C9.03154 5.86706 9.12438 5.63571 9.16298 5.39251C9.20347 5.13535 9.18218 4.87223 9.10089 4.62496C9.01959 4.37769 8.88062 4.15339 8.69549 3.97066L6.3004 1.62823C5.86439 1.21809 5.28762 0.991604 4.68951 0.995649C4.0914 0.999695 3.51775 1.23397 3.08733 1.64996L0.561957 4.22223C-0.144569 4.93132 -0.144602 6.13521 0.586219 7.80915C1.02008 8.88675 1.63828 9.88028 2.413 10.7451L8.38881 16.6504C9.26258 17.4146 10.2627 18.0204 11.3443 18.4403C12.0169 18.737 12.7391 18.9044 13.4734 18.9337C13.7402 18.9466 14.0067 18.9044 14.2564 18.8098C14.5062 18.7151 14.7338 18.5699 14.9251 18.3833L17.4587 15.8192C17.8753 15.3841 18.1034 14.8017 18.0932 14.1989C18.083 13.5961 17.8353 13.0217 17.4042 12.601ZM16.2325 14.64L13.6989 17.2041C13.2189 17.5595 10.5211 16.4067 9.53356 15.4551L3.55775 9.54984C2.56996 8.56557 1.40735 5.91178 1.75547 5.40166L4.28085 2.8294C4.39173 2.72621 4.5372 2.66839 4.68856 2.66737C4.83991 2.66635 4.98615 2.72219 5.09842 2.82387L7.46871 5.12552L6.65535 5.75344C6.42129 5.93912 6.22857 6.17176 6.08956 6.43644C5.95055 6.70112 5.86831 6.99198 5.84813 7.29037C5.83023 7.59149 5.87665 7.89297 5.9843 8.17469C6.09194 8.45641 6.25834 8.71189 6.47239 8.92409L10.127 12.5356C10.3405 12.7489 10.5976 12.9132 10.8806 13.0174C11.1636 13.1215 11.4658 13.1629 11.7663 13.1387C12.0639 13.1145 12.3532 13.0282 12.6155 12.8854C12.8778 12.7426 13.1075 12.5464 13.2896 12.3095L13.8327 11.6015L13.8324 11.5605L13.8319 11.4868L16.2106 13.8294C16.3136 13.9379 16.3728 14.0808 16.3768 14.2305C16.3809 14.3802 16.3294 14.526 16.2325 14.64Z" fill="white" />
+										</svg>
+									</span>
 									<a href="tel:6295550129" class="footer__link">(629) 555-0129</a>
 								</li>
 								<li class="footer__item footer__item_mail">
+									<span>
+										<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.6 0H2.4C1.76348 0 1.15303 0.276562 0.702944 0.768845C0.252856 1.26113 0 1.92881 0 2.625V11.375C0 12.0712 0.252856 12.7389 0.702944 13.2312C1.15303 13.7234 1.76348 14 2.4 14H13.6C14.2365 14 14.847 13.7234 15.2971 13.2312C15.7471 12.7389 16 12.0712 16 11.375V2.625C16 1.92881 15.7471 1.26113 15.2971 0.768845C14.847 0.276562 14.2365 0 13.6 0ZM13.272 1.75L8.568 6.895C8.49363 6.97701 8.40515 7.04211 8.30766 7.08653C8.21017 7.13095 8.10561 7.15382 8 7.15382C7.89439 7.15382 7.78983 7.13095 7.69234 7.08653C7.59485 7.04211 7.50637 6.97701 7.432 6.895L2.728 1.75H13.272ZM14.4 11.375C14.4 11.6071 14.3157 11.8296 14.1657 11.9937C14.0157 12.1578 13.8122 12.25 13.6 12.25H2.4C2.18783 12.25 1.98434 12.1578 1.83431 11.9937C1.68429 11.8296 1.6 11.6071 1.6 11.375V2.98375L6.304 8.12875C6.754 8.62033 7.364 8.89644 8 8.89644C8.636 8.89644 9.246 8.62033 9.696 8.12875L14.4 2.98375V11.375Z" fill="white" />
+										</svg>
+									</span>
 									<a href="#" class="footer__link">debra.holt@example.сom</a>
 								</li>
 							</ul>
@@ -917,7 +944,7 @@
 	</div>
 </div>
  -->
-	<script src="js/app.min.js?_v=20221017162546"></script>
+	<script src="js/app.min.js?_v=20221019130042"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		AOS.init();
